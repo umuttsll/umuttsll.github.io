@@ -578,3 +578,72 @@ html {
 }
 
 
+
+
+
+/* SİTE GÖRSELLERİNİB MOBİL UYUMLU OLMASINI SAĞLAYAN KODLAR */
+
+@media (max-width: 768px) {
+
+    /* GLOBAL */
+    section {
+        padding: 60px 20px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .typing-text {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-image img {
+        width: 220px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* PROJECTS */
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ABOUT */
+    .about p {
+        font-size: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 13px;
+    }
+}
+
+/* SİTE MOBİL UYUMU SONU */
