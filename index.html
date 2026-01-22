@@ -95,7 +95,19 @@
             <h3>Portfolio Sitesi</h3>
             <p>Kişisel web sitesi projesi</p>
 
-            <a href="https://github.com/umuttsll" target="_blank" class="project-detail-btn">Detay</a>
+<button 
+  class="project-detail-btn"
+  onclick="openModal(this)"
+  data-img1="gorseller/İCON2.webp"
+  data-img2="gorseller/İCON2.webp"
+  data-img3="gorseller/İCON2.webp"
+  data-text="Bu proje IoT tabanlı bir sistemdir. ESP32 ve web arayüzü kullanılmıştır."
+  data-link="https://github.com/umuttsll/"
+>
+  Detay
+</button>
+
+
 
         </div>
 
@@ -104,7 +116,19 @@
             <h3>Dashboard</h3>
             <p>Admin panel tasarımı</p>
 
-            <a href="https://github.com/umuttsll" target="_blank" class="project-detail-btn">Detay</a>
+<button 
+  class="project-detail-btn"
+  onclick="openModal(this)"
+  data-img1="gorseller/İCON 7.webp"
+  data-img2="gorseller/İCON 7.webp"
+  data-img3="gorseller/İCON 7.webp"
+  data-text="Bu proje IoT tabanlı bir sistemdir. ESP32 ve web arayüzü kullanılmıştır."
+  data-link="https://github.com/umuttsll/"
+>
+  Detay
+</button>
+
+
 
         </div>
 
@@ -113,7 +137,18 @@
             <h3>Landing Page</h3>
             <p>Startup tanıtım sitesi</p>
 
-            <a href="https://github.com/umuttsll" target="_blank" class="project-detail-btn">Detay</a>
+<button 
+  class="project-detail-btn"
+  onclick="openModal(this)"
+  data-img1="gorseller/İCON3.webp"
+  data-img2="gorseller/İCON3.webp"
+  data-img3="gorseller/İCON3.webp"
+  data-text="Bu proje IoT tabanlı bir sistemdir. ESP32 ve web arayüzü kullanılmıştır."
+  data-link="https://github.com/umuttsll/"
+>
+  Detay
+</button>
+
 
         </div>
     </div>
@@ -132,6 +167,44 @@
         </div>
     </div>
 </div>
+
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+
+
+
+   <div class="modal-images">
+  <img id="modalImg1">
+  <img id="modalImg2">
+  <img id="modalImg3">
+   </div>
+
+   <br><br><br>
+
+<div class="modal-text">
+  <p id="modalText"></p>
+</div>
+
+
+<div class="modal-buttons">
+    <a id="modalClose" class="close-project-btn" onclick="closeModal()">Kapat</a>
+
+
+<a id="modalLink" target="_blank" class="project-btn">
+  Projeye Git
+</a>
+</div>
+
+
+
+<div class="kapat">Ekranı kapatmak için "ESC" tuşuna basın.</div>
+
+    </div>
+
+  </div>
+</div>
+
 
 
 <footer id="contact">

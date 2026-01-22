@@ -114,3 +114,60 @@ function typeEffect() {
 typeEffect();
 
 
+function openModal(button) {
+
+  document.getElementById("modalImg1").src = button.dataset.img1;
+  document.getElementById("modalImg2").src = button.dataset.img2;
+  document.getElementById("modalImg3").src = button.dataset.img3;
+
+  document.getElementById("modalText").innerText = button.dataset.text;
+  document.getElementById("modalLink").href = button.dataset.link;
+
+  document.getElementById("projectModal").style.display = "block";
+
+  // ✅ SADECE MODAL AÇILDIĞINDA SCROLL KİLİTLENİR
+  document.body.style.overflow = "hidden";
+}
+
+
+
+
+function closeModal() {
+  document.getElementById("projectModal").style.display = "none";
+
+  // ✅ MODAL KAPANINCA SCROLL GERİ GELİR
+  document.body.style.overflow = "auto";
+}
+
+
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
+
+
+const modalImages = document.querySelectorAll('.modal-images img');
+
+// Resme tıklanınca büyüme / küçülme toggle
+modalImages.forEach(img => {
+  img.addEventListener('click', () => {
+    // Eğer zaten büyümüşse küçült
+    if (img.classList.contains('active-img')) {
+      img.classList.remove('active-img');
+    } else {
+      // Önce diğer görselleri küçült
+      modalImages.forEach(i => i.classList.remove('active-img'));
+      // Bu görseli büyüt
+      img.classList.add('active-img');
+    }
+  });
+});
+
+// Modal kapatma fonksiyonu (ESC artık kullanılmıyor)
+function closeModal() {
+  document.getElementById("projectModal").style.display = "none";
+  document.body.style.overflow = "auto";
+  modalImages.forEach(img => img.classList.remove('active-img'));
+}
